@@ -75,6 +75,12 @@ namespace DemoApplication
 
 
             _context.SaveChanges();
+
+            _freeSlots = _context.time_table
+                        .Where(slot => (slot.Day == dayValue))
+                        .Select(slot => new Slot
+                        { HallName = slot.HallName, StartTime = slot.StartTime, EndTime = slot.EndTime, EventName = slot.EventName })
+                        .ToList();
         }
 
 
