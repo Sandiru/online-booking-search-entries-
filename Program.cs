@@ -16,7 +16,7 @@ namespace DemoApplication
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
-            
+
 
             var builder = new ConfigurationBuilder()
                .SetBasePath(Directory.GetCurrentDirectory())
@@ -42,6 +42,6 @@ namespace DemoApplication
             services.AddDbContext<ApplicationDbContext>();
         }
     }
-    }
+}
 
-    
+
